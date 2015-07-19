@@ -2,7 +2,7 @@ class WinesController < ApplicationController
   before_action :set_wine, only: [:show, :edit, :update, :destroy]
 
   def index
-    @wines = Wine.all
+    @wines = Wine.where(availability: true)
   end
 
   def show
@@ -36,6 +36,7 @@ class WinesController < ApplicationController
     @wine.destroy
       redirect_to wines_path, notice: 'Wine was successfully destroyed.'
   end
+
 
   private
     def set_wine

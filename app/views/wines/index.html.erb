@@ -1,33 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 
-<h1>Listing Wines</h1>
+<%= render @wines %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Availability</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @wines.each do |wine| %>
-      <tr>
-        <td><%= wine.name %></td>
-        <td><%= wine.description %></td>
-        <td><%= wine.price %></td>
-        <td><%= wine.availability %></td>
-        <td><%= link_to 'Show', wine %></td>
-        <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
-        <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Wine', new_wine_path %>
+</div>

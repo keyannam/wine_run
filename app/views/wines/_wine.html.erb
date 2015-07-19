@@ -1,0 +1,12 @@
+<div class="col-md-3">
+<div class="thumbnail">
+<%= link_to wine_path(wine) do %>
+<%= image_tag "apothic.jpg", class: "img-responsive" %>
+<% end %>
+
+<div class="caption">
+<p><strong><%= link_to wine.name, wine_path(wine) %></strong></p>
+<p>$<%= wine.price.to_f / 100 %></p>
+</div>
+</div>
+</div>
