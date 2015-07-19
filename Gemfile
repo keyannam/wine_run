@@ -33,6 +33,7 @@ gem 'cancan'
 
 gem 'paperclip'
 
+gem 'dotenv-rails'
 
 
 # Use ActiveModel has_secure_password
