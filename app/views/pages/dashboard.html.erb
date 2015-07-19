@@ -1,0 +1,38 @@
+<div class="row">
+<h1 class="text-center">My Dashboard</h1>
+  <div class="col-md-4">
+    <h3 class="text-center">
+      Wines <%= link_to "New Wine", new_wine_path, class: "btn btn-primary bt-sm"  %>
+    </h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Available</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @wines.each do |wine| %>
+          <tr>
+            <td><%= wine.id %></td>
+            <td><%= link_to wine.name, wine_path(wine) %></td>
+            <td><%= wine.availability %></td>
+            <td><%= link_to "Edit", edit_wine_path(wine) %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+  </div>
+  <div class="col-md-4">
+    <h3 class="text-center">
+      Purchased
+    </h3>
+  </div>
+  <div class="col-md-4">
+    <h3 class="text-center">
+      Sales
+    </h3>
+  </div>
+</div>
