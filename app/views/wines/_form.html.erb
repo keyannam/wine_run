@@ -1,14 +1,11 @@
-<%= simple_form_for(@wine) do |f| %>
+<%= simple_form_for(@wine, html: {class: "form-signin"}) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :availability %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <%= f.input :name, required: true, label: false, placeholder: "Wine Name", input_html: {class: "form-control"} %>
+    <%= f.input :description, required: true, label: false, placeholder: "Description", input_html: {class: "form-control", rows: 5} %>
+    <%= f.input :price, required: true, label: false, placeholder: "Price", input_html: {class: "form-control"} %>
+    <%= f.input :availability, required: false %>
+
+    <%= f.button :submit, class: "btn btn-primary btn-block" %>
 <% end %>
