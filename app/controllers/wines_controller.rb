@@ -14,10 +14,12 @@ class WinesController < ApplicationController
   end
 
   def edit
+    authorize! :manage, @wine
   end
 
   def create
     @wine = current_user.wines.new(wine_params)
+
       if @wine.save
         redirect_to @wine, notice: 'Wine was successfully created.'
       else
@@ -26,6 +28,7 @@ class WinesController < ApplicationController
   end
 
   def update
+    authorize! :manage, @wine
       if @wine.update(wine_params)
         redirect_to @wine, notice: 'Wine was successfully updated.'
       else
@@ -34,6 +37,8 @@ class WinesController < ApplicationController
   end
 
   def destroy
+    authorize! :manage, @wine
+
     @wine.destroy
       redirect_to wines_path, notice: 'Wine was successfully destroyed.'
   end
