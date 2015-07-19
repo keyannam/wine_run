@@ -1,4 +1,5 @@
 class WinesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_wine, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -16,7 +17,7 @@ class WinesController < ApplicationController
   end
 
   def create
-    @wine = Wine.new(wine_params)
+    @wine = current_user.wines.new(wine_params)
       if @wine.save
         redirect_to @wine, notice: 'Wine was successfully created.'
       else
