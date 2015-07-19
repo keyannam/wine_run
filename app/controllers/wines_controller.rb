@@ -22,7 +22,6 @@ class WinesController < ApplicationController
       else
         render :new
       end
-    end
   end
 
   def update
@@ -31,13 +30,11 @@ class WinesController < ApplicationController
       else
         render :edit
       end
-    end
   end
 
   def destroy
     @wine.destroy
       redirect_to wines_path, notice: 'Wine was successfully destroyed.'
-    end
   end
 
   private
