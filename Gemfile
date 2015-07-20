@@ -37,6 +37,8 @@ gem 'dotenv-rails'
 
 gem 'aws-sdk'
 
+gem 'friendly_id'
+
 
 
 # Use ActiveModel has_secure_password
