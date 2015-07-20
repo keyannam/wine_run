@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720195211) do
+ActiveRecord::Schema.define(version: 20150720223813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20150720195211) do
     t.integer  "wine_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "state"
+    t.string   "stripe_id"
+    t.string   "stripe_token"
+    t.text     "error"
   end
 
   create_table "searches", force: :cascade do |t|
