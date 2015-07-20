@@ -1,7 +1,7 @@
 <div class="col-md-3">
 <div class="thumbnail">
 <%= link_to wine_path(wine) do %>
-<%= image_tag "apothic.jpg", class: "img-responsive" %>
+<%= image_tag wine.image.url(:original), class: "img-responsive" %>
 <% end %>
 
 <div class="caption">
