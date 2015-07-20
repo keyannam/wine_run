@@ -1,0 +1,20 @@
+<table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Available</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @wines.each do |wine| %>
+      <tr>
+        <td><%= wine.id %></td>
+        <td><%= link_to wine.name, wine_path(wine) %></td>
+        <td><%= wine.availability %></td>
+        <td><%= link_to "Edit", edit_wine_path(wine) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+</table>
