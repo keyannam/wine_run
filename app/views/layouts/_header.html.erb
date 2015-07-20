@@ -10,6 +10,15 @@
       </button>
       <%= link_to "Wine Run", root_path, class: "navbar-brand" %>
     </div>
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+          <%= form_tag wines_path, :method => 'get' do %>
+          <% end %>
+          <%= link_to "Advanced Search", new_search_path %>
+
+        </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

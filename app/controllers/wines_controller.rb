@@ -3,7 +3,7 @@ class WinesController < ApplicationController
   before_action :set_wine, only: [:show, :edit, :update, :destroy]
 
   def index
-    @wines = Wine.where(availability: true)
+    @wines = Wine.search(params[:search])
   end
 
   def show
@@ -50,6 +50,6 @@ class WinesController < ApplicationController
     end
 
     def wine_params
-      params.require(:wine).permit(:name, :description, :price, :availability, :image)
+      params.require(:wine).permit(:name, :description, :price, :availability, :image, :category)
     end
 end

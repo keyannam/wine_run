@@ -1,0 +1,12 @@
+<h1>Search Results</h1>
+<% if @search.search_wines.empty? %>
+	<p>No Records Found</p>
+<% else %>
+	<% @search.search_wines.each do |c| %>
+		<div>
+			<h3><%= c.name %></h3>
+			<p>Price: $<%= c.price %></p>
+			<p>Category: <%= c.category %></p>
+		</div>
+	<% end %>
+<% end %>

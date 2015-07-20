@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :searches
   resources :wines
   devise_for :users
   root 'pages#home'

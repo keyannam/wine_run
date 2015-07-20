@@ -1,7 +1,15 @@
 class Wine < ActiveRecord::Base
+  def self.search(search)
+  if search
+    where(['name LIKE ?', "%#{search}%"])
+  else
+    all
+  end
+end
+
   extend FriendlyId
   friendly_id :name, use: :slugged
-  
+
   belongs_to :user
   has_attached_file :image
 
