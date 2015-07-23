@@ -178,7 +178,7 @@ input {
 
 /* HEADER SECTION */
 #h {
-	background: url(../assets/toast.jpg) no-repeat center top;
+	background: image-url(../assets/toast.jpg) no-repeat center top;
 	padding-top: 180px;
 	text-align:center;
 	background-attachment: relative;
@@ -235,7 +235,7 @@ input {
 
 /* SEP */
 #sep {
-	background: url(../assets/dinner.jpg) no-repeat center top;
+	background: image-url(../assets/dinner.jpg) no-repeat center top;
 	padding-top: 90px;
 	text-align:center;
 	background-attachment: relative;

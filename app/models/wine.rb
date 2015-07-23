@@ -11,7 +11,7 @@ end
   friendly_id :name, use: :slugged
 
   belongs_to :user
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "150x150>" }
+  has_attached_file :image
   has_many :sales
 
   validates_attachment_content_type :image,
