@@ -43,6 +43,10 @@ gem 'stripe'
 
 gem 'aasm'
 
+gem 'jquery-ui-rails'
+
+gem 'gmaps-autocomplete-rails'
+
 gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
