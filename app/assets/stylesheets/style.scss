@@ -240,7 +240,7 @@ input {
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 450px;
+	min-height: 350px;
 	width: 100%;
 	color: white;
 
@@ -257,14 +257,14 @@ input {
 
 #sep h4 {
 	letter-spacing: 1px;
-	line-height: 30px;
+	line-height: 40px;
 	margin-top: 30px;
 }
 
 #module-fast-free-easy, #module-product, #module-brand {
 	background: #ffffff;
 	padding: 4em 0.75em;
-	position: relative;
+	position: absolute;
 	z-index: 10;
 }
 
