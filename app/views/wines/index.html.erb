@@ -1,7 +1,14 @@
 <div class="container">
 <div class="row">
 
-<%= render @wines %>
+
+<% @wines.in_groups_of(4, false) do |wines| %>
+  <div class="row">
+    <% wines.each do |wine| %>
+      <%= render wine %>
+    <% end %>
+  </div>
+<% end %>
 
 </div>
 </div>
