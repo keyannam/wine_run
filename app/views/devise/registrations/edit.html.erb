@@ -3,6 +3,14 @@
 <h2 class="text-center">Settings</h2>
   <%= f.error_notification %>
 
+    <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "First & Last Name", input_html: {class: "form-control"} %>
+    <%= f.input :phone, required: true, autofocus: true, label: false, placeholder: "Phone Number", input_html: {class: "form-control"} %>
+    <%= f.input :address, required: true, autofocus: true, label: false, placeholder: "Delivery Address Line 1", input_html: {class: "form-control"} %>
+    <%= f.input :address, required: false, autofocus: true, label: false, placeholder: "Address Line 2 - optional", input_html: {class: "form-control"} %>
+    <%= f.input :city, required: true, autofocus: true, label: false, placeholder: "City" %>
+    <%= f.input :state, required: true, autofocus: true, label: false, placeholder: "State" %>
+    <%= f.input :zipcode, required: true, autofocus: true, label: false, placeholder: "Zip Code" %>
+
     <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "Email", input_html: {class: "form-control"} %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
